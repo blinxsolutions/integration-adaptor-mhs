@@ -6,7 +6,7 @@ build_id = "7ff606307e6215d8a34b4ee9a201aa1f4690f340"
 supplier_vpc_id = "vpc-075194d9f2e3ca45b"
 # placeholder
 opentest_vpc_id = "vpc-075194d9f2e3ca45b"
-internal_root_domain = "internal.somedomainyoucontrol.com"
+internal_root_domain = "internal.paco-24-np.com"
 mhs_sync_async_table_read_capacity = 5
 mhs_sync_async_table_write_capacity = 5
 mhs_outbound_service_minimum_instance_count = 1
