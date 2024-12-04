@@ -31,4 +31,4 @@ jobs:
           IMAGE_TAG: latest
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG -f docker/inbound/Dockerfile .
-          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG -f docker/outbound/Dockerfile .
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
