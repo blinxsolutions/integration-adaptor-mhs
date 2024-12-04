@@ -23,7 +23,7 @@ jobs:
       - name: Run terraform
         working-directory: pipeline/terraform/mhs-environment
         run: |
-          terraform init
+          terraform init -backend-config="./state.config"
           terraform plan
           terraform apply -auto-approve
 
