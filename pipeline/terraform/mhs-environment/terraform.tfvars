@@ -1,6 +1,6 @@
 region = "eu-west-2"
 environment_id = "paco24-int-mhs"
-mhs_vpc_cidr_block = "10.0.0.0/16"
+mhs_vpc_cidr_block = "172.60.0.0/16"
 build_id = "7ff606307e6215d8a34b4ee9a201aa1f4690f340"
 # dev-VPCStack/VPC
 supplier_vpc_id = "vpc-07c9763c43fbe3dcf"
