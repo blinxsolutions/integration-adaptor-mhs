@@ -81,7 +81,6 @@ resource "aws_lb_listener" "outbound_tmp_alb_listener" {
   load_balancer_arn = aws_lb.outbound_alb.arn
   port = 80
   protocol = "HTTP"
-  ssl_policy = "ELBSecurityPolicy-TLS-1-2-2017-01"
 
   default_action {
     type = "forward"
