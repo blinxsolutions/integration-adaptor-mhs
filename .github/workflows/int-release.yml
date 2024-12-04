@@ -19,6 +19,10 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::533267356181:role/github-ci-role
           aws-region: eu-west-2
+        
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "0.12.31"
 
       - name: Run terraform
         working-directory: pipeline/terraform/mhs-environment
