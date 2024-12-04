@@ -165,4 +165,3 @@ export-env-vars-and-run-mhs-docker.sh
 out/
 
 *.env
-pipeline/terraform/mhs-environment/terraform.tfvars

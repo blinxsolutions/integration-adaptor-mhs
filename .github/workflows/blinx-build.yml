@@ -1,8 +1,9 @@
 name: Build and push container images to DockerHub
 on:
-  push:
-    branches:
-      - blinx-change
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - blinx-change
 
 jobs:
   build:
