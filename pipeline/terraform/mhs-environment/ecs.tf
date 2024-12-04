@@ -63,10 +63,10 @@ locals {
       name = "MHS_RESYNC_INTERVAL"
       value = var.mhs_resynchroniser_interval
     },
-    {
-      name = "MHS_SPINE_ROUTE_LOOKUP_URL"
-      value = "https://${aws_route53_record.mhs_route_load_balancer_record.name}"
-    },
+    # {
+    #   name = "MHS_SPINE_ROUTE_LOOKUP_URL"
+    #   value = "https://${aws_route53_record.mhs_route_load_balancer_record.name}"
+    # },
     {
       name = "MHS_SPINE_ORG_CODE"
       value = var.mhs_spine_org_code
@@ -398,7 +398,7 @@ resource "aws_ecs_service" "mhs_outbound_service" {
     ]
   }
 
-  wait_for_steady_state = true
+  wait_for_steady_state = false 
 }
 
 # The autoscaling target that configures autoscaling for the MHS outbound ECS service.
@@ -471,7 +471,7 @@ resource "aws_ecs_service" "mhs_inbound_service" {
     ]
   }
 
-  wait_for_steady_state = true
+  wait_for_steady_state = false
 }
 
 # The autoscaling target that configures autoscaling for the MHS inbound ECS service.
@@ -541,7 +541,7 @@ resource "aws_ecs_service" "mhs_route_service" {
     ]
   }
 
-  wait_for_steady_state = true
+  wait_for_steady_state = false
 }
 
 # The autoscaling target that configures autoscaling for the MHS route ECS service.
