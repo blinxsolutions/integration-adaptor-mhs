@@ -419,6 +419,14 @@ resource "aws_security_group" "alb_outbound_security_group" {
     description = "Tmp rule to allow HTTP traffic from the internet"
   }
 
+  ingress {
+    from_port = 443
+    to_port = 443
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "Tmp rule to allow HTTPS traffic VPN"
+  }
+
   # Allow outbound traffic to MHS outbound tasks
   egress {
     from_port = 80
