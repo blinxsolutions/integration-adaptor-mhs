@@ -63,10 +63,10 @@ locals {
       name = "MHS_RESYNC_INTERVAL"
       value = var.mhs_resynchroniser_interval
     },
-    # {
-    #   name = "MHS_SPINE_ROUTE_LOOKUP_URL"
-    #   value = "https://${aws_route53_record.mhs_route_load_balancer_record.name}"
-    # },
+    {
+      name = "MHS_SPINE_ROUTE_LOOKUP_URL"
+      value = "https://${aws_route53_record.mhs_route_load_balancer_record.name}"
+    },
     {
       name = "MHS_SPINE_ORG_CODE"
       value = var.mhs_spine_org_code
