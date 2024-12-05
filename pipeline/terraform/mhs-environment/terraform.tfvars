@@ -27,8 +27,7 @@ mhs_resynchroniser_max_retries = 3
 mhs_resynchroniser_interval = 1
 mhs_state_table_read_capacity = 5
 mhs_state_table_write_capacity = 5
-# TODO: update
-mhs_spine_org_code = "ORG123"
+mhs_spine_org_code = "YGMQJ"
 inbound_queue_brokers = "amqps://b-bdbff81b-16b9-4e22-b865-6605d7919739.mq.eu-west-2.amazonaws.com:5671"
 inbound_queue_name = "paco24-int-nhs-mhs-queue-broker"
 inbound_queue_username_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/int/nhs-mhs/inbound_queue/username-1Qgy17"
