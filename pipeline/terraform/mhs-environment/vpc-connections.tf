@@ -116,10 +116,10 @@ resource "aws_route" "opentest_to_mhs_route" {
 }
 
 # Allow DNS resolution of the domain names defined in route53.tf in the Opentest VPC
-resource "aws_route53_zone_association" "opentest_hosted_zone_mhs_vpc_association" {
-  zone_id = aws_route53_zone.mhs_hosted_zone.zone_id
-  vpc_id = data.aws_vpc.opentest_vpc.id
-}
+# resource "aws_route53_zone_association" "opentest_hosted_zone_mhs_vpc_association" {
+#   zone_id = aws_route53_zone.mhs_hosted_zone.zone_id
+#   vpc_id = data.aws_vpc.opentest_vpc.id
+# }
 
 # Allow outbound HTTP proxy requests from MHS outbound security group to Opentest
 resource "aws_security_group_rule" "mhs_outbound_security_group_opentest_http_proxy_egress_rule" {

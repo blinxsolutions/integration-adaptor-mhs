@@ -1,0 +1,1 @@
+openssl req -x509 -subj "/CN=mhs-outbound.paco24-int-mhs.internal.paco-24-np.com" -newkey rsa:2048 -nodes -keyout key.pem -out cert.pem -days 365
