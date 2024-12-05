@@ -76,18 +76,6 @@ resource "aws_lb_listener" "outbound_alb_listener" {
   }
 }
 
-# tmp listener for the outbound ALB to allow HTTP traffic
-resource "aws_lb_listener" "outbound_tmp_alb_listener" {
-  load_balancer_arn = aws_lb.outbound_alb.arn
-  port = 80
-  protocol = "HTTP"
-
-  default_action {
-    type = "forward"
-    target_group_arn = aws_lb_target_group.outbound_alb_target_group.arn
-  }
-}
-
 ##############
 # MHS route load balancer
 ##############
