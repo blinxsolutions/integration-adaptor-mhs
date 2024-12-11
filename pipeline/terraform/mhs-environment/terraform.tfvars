@@ -39,7 +39,7 @@ client_cert_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/i
 client_key_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/int/nhs-mhs/client_key-jnRd5x"
 ca_certs_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/int/nhs-mhs/ca_certs-VmBqHl"
 outbound_alb_certificate_arn = "arn:aws:acm:eu-west-2:533267356181:certificate/6741f6d7-976a-4a5e-b3c5-5345b332d576"
-route_alb_certificate_arn = "arn:aws:acm:eu-west-2:533267356181:certificate/6741f6d7-976a-4a5e-b3c5-5345b332d576"
+route_alb_certificate_arn = "arn:aws:acm:eu-west-2:533267356181:certificate/f5b18a7d-dfc9-4949-a93f-9933ef3f5589"
 spineroutelookup_service_sds_url = "ldaps://ldap.nis1.national.ncrs.nhs.uk"
 spineroutelookup_service_search_base = "ou=services,o=nhs"
 elasticache_node_type = "cache.t3.micro"
