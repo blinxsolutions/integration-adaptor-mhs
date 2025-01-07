@@ -40,11 +40,14 @@ client_key_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/in
 ca_certs_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/int/nhs-mhs/ca_certs-VmBqHl"
 outbound_alb_certificate_arn = "arn:aws:acm:eu-west-2:533267356181:certificate/6741f6d7-976a-4a5e-b3c5-5345b332d576"
 route_alb_certificate_arn = "arn:aws:acm:eu-west-2:533267356181:certificate/f5b18a7d-dfc9-4949-a93f-9933ef3f5589"
-spineroutelookup_service_sds_url = "ldaps://ldap.nis1.national.ncrs.nhs.uk"
-spineroutelookup_service_search_base = "ou=services,o=nhs"
 elasticache_node_type = "cache.t3.micro"
 mhs_forward_reliable_endpoint_url = "https://spine-endpoint"
-mhs_outbound_routing_lookup_method = "SPINE_ROUTE_LOOKUP"
-# mhs_outbound_routing_lookup_method = "SDS_API"
+
+# after called with NHS team. we been suggested to use SDS API instead of LDAP because it is more reliable and faster and modern
+# it also imply we no need the route service to be in the same VPC as the MHS
+# it also imply we no need the AWS DDB cache table
+# spineroutelookup_service_sds_url = "ldaps://ldap.nis1.national.ncrs.nhs.uk"
+# spineroutelookup_service_search_base = "ou=services,o=nhs"
+mhs_outbound_routing_lookup_method = "SDS_API"
 mhs_sds_api_url = "https://int.api.service.nhs.uk/spine-directory/FHIR/R4"
 mhs_sds_api_key_arn = "arn:aws:secretsmanager:eu-west-2:533267356181:secret:paco24/int/nhs-mhs/sds-api-key-Zed2Qf"
