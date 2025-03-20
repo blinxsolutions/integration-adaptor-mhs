@@ -1,8 +1,6 @@
 name: run terraform and release
 on:
-  push:
-    branches:
-      - blinx-change
+  workflow_dispatch:
 
 jobs:
   build:
